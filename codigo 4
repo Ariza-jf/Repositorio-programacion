@@ -1,0 +1,14 @@
+class Usuario:
+    def __init__(self, usuario, contraseña):
+        self.usuario = usuario
+        self.contraseña = contraseña
+
+    def autenticar(self, usuario, contraseña):
+        return self.usuario == usuario and self.contraseña == contraseña
+
+# Ejemplo de uso
+usua = Usuario("FEL1PE", "98762")
+if usua.autenticar("FEL1PE", "98762"):
+    print("Autenticación exitosa")
+else:
+    print("Autenticación fallida")
