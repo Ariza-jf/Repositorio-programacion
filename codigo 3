@@ -1,0 +1,12 @@
+class Factura:
+    def __init__(self, prod): 
+        self.productos = prod
+
+    def calcular_total(self):
+        total = 0
+        for prod, precio in self.productos.items():
+            total += precio
+        return total
+
+fact = Factura({"Huevos": 4.80, "Cebollas": 4.50, "Tomate": 6.30})
+print(f"El total de la factura es: ${fact.calcular_total()}")
