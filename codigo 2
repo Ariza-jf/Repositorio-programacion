@@ -1,0 +1,11 @@
+class promedio:
+    def __init__(self, nombre, notas):
+        self.nombre = nombre
+        self.notas = notas
+
+    def calcular(self):
+        return sum(self.notas) / len(self.notas)
+
+# Ejemplo de uso
+est = promedio("Felipe", [4.8, 3.0, 2.5, 5.0, 4.0])
+print(f"El promedio de {est.nombre} es: {est.calcular()}")
