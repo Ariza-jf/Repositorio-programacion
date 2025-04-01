@@ -1,0 +1,15 @@
+class Salarios:
+    def __init__(self, nombre, salario_base, horas_trabajadas):
+        self.nombre = nombre
+        self.salario_base = salario_base
+        self.horas_trabajadas = horas_trabajadas
+
+    def calcular(self):
+        if self.horas_trabajadas<=0:
+            print('no hay horas trabajadas')
+            return 0
+        
+        return self.salario_base * self.horas_trabajadas
+
+empleado = Salarios("Felipe", 20, 30)
+print(f"El salario de {empleado.nombre} es: ${empleado.calcular()}")
