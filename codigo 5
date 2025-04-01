@@ -1,0 +1,18 @@
+class Menu:
+    def __init__(self, opciones):
+        self.opciones = opciones
+
+    def mostrar(self):
+        for i, opcion in enumerate(self.opciones):
+            print(f"{i + 1}. {opcion}")
+
+    def ejecutar(self, opcion_seleccionada):
+        if 1 <= opcion_seleccionada <= len(self.opciones):
+            print(f"Ejecutando opción: {self.opciones[opcion_seleccionada - 1]}")
+        else:
+            print("Eleccion inválida")
+
+menu = Menu(["Menu 1", "Menu 2", "Menu 3", "Menu 4"])
+menu.mostrar()
+opcion = int(input("Seleccione una opción: "))
+menu.ejecutar(opcion)
